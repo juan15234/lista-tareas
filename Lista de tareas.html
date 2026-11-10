@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lista de tareas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<section id="login" class="hide">
+  <h1>Bienvenido/a</h1>
+  <p class="sub">Escribe tu nombre para empezar a organizar tus tareas.</p>
+  <div class="card">
+    <label for="nombre">Tu nombre</label>
+    <input type="text" id="nombre" maxlength="40" placeholder="Ej. María" autocomplete="given-name">
+    <button class="primary" id="entrar">Entrar</button>
+  </div>
+</section>
+
+<section id="app" class="hide">
+  <div class="top">
+    <div>
+      <h1 id="saludo"></h1>
+      <p class="sub" id="resumen"></p>
+    </div>
+    <button class="link" id="salir">Cambiar nombre</button>
+  </div>
+
+  <div class="card">
+    <label for="texto">Nueva tarea</label>
+    <input type="text" id="texto" maxlength="120" placeholder="¿Qué tienes que hacer?">
+    <div class="row">
+      <div>
+        <label for="limite">Fecha y hora límite</label>
+        <input type="datetime-local" id="limite">
+      </div>
+    </div>
+    <button class="primary" id="agregar">Agregar tarea</button>
+  </div>
+
+  <div class="card">
+    <div class="bar"><i id="prog"></i></div>
+    <p class="sub" id="progtxt" style="margin:0 0 14px"></p>
+    <div class="tabs" id="tabs">
+      <button data-f="todas" class="on">Todas</button>
+      <button data-f="pendientes">Pendientes</button>
+      <button data-f="hechas">Hechas</button>
+    </div>
+    <ul id="lista"></ul>
+  </div>
+</section>
+
+</div>
+<script src="app.js">
+</script>
+</body>
+</html>
